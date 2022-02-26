@@ -9,6 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>inspire_check4</title>
 </head>
@@ -44,13 +45,17 @@
         quotes
       </div>
       <div class="col-4">
-        <div class="border border-dark">
-          <form class="" onsubmit="app.tasksController.createTask('${this.id}')">
+        <div class=" bg-dark text-light text-center shadow">
+          <h3>Todo List</h3>
+        </div>
+        <div id="todo" class="bg-light text-dark">
+          task
+        </div>
+          <form class="" onsubmit="app.todosController.createTask()">
             <div class="input-group">
-              <input required type="text" class="form-control" placeholder="Task..." aria-label="task"
-                aria-describedby="task" maxlength="50" minlength="3" id="name">
+              <input  required type="text" class="form-control" placeholder="Task..." aria-label="task" aria-describedby="task" maxlength="50" minlength="3" id="name">
               <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
-                <i class="mdi mdi-plus"></i></button>
+              <i class="mdi mdi-plus"></i></button>
             </div>
           </form>
         </div>

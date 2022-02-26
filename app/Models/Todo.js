@@ -1,24 +1,41 @@
+import { generateId } from "../Utils/generateId.js";
+
 export class Todo {
   constructor(data) {
-    this.completed = data.completed;
+    this.completed = data.completed
     this.description = data.description;
     this.user = data.user;
+    this.id = data.id || generateId()
   }
 
   get Template() {
     return /*html*/ `
-<div class="border border-dark">
-          <form class="" onsubmit="app.tasksController.createTask('${this.id}')">
-            <div class="input-group">
-              <input required type="text" class="form-control" placeholder="Task..." aria-label="task"
-                aria-describedby="task" maxlength="50" minlength="3" id="name">
-              <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
-                <i class="mdi mdi-plus"></i></button>
-            </div>
-          </form>
-        </div>
-
+    <div>
+      <p>${this.completed}/${this.TotalList}</p>
+    </div>
+    <div class="border border-dark">
+     ${this.TaskTemplate}
+    </div>
+  
 
 `;
   }
+
+
+
+
+get TaskTemplate(){
+  return `
+  <div class="form-check bg-secondary text-center d-flex justify-content-between">
+    ${this.description}
+    <input class="form-check-input" type="checkbox" ${this.completed ? 'checked' : ''} onclick="app.todosController.completeTodo('${this.id}')"  value="" >
+    <i class="mdi mdi-delete" onclick="app.todosController.deleteTodo('${this.id}')"></i>
+  </div>
+  
+  `
+}
+
+
+
+
 }
