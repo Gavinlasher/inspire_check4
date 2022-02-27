@@ -8,10 +8,14 @@ export class Weather {
   get Template() {
     return `
     
-    <li>${this.name}</li>
-    <li onclick="app.weatherController.toggleWeather()">${this.Conver}${
-      this.clicked ? "C" : "F"
-    }</li>
+    <h2>${this.name}</h2>
+    <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="app.weatherController.toggleWeather()">
+  <label class="form-check-label" for="flexSwitchCheckDefault">${this.Conver}${
+    this.clicked ? "C" : "F"
+  }</label>
+  
+   
     
     
 

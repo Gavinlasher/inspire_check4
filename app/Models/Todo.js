@@ -1,3 +1,4 @@
+import { ProxyState } from "../AppState.js";
 import { generateId } from "../Utils/generateId.js";
 
 export class Todo {
@@ -11,7 +12,7 @@ export class Todo {
   get Template() {
     return /*html*/ `
     <div>
-      <p>${this.completed}/${this.TotalList}</p>
+      <p>${this.Done}/${this.TotalList}</p>
     </div>
     <div class="border border-dark">
      ${this.TaskTemplate}
@@ -34,6 +35,33 @@ get TaskTemplate(){
   
   `
 }
+
+
+get TotalList(){
+  let output = 0
+
+ output += ProxyState.todo.length
+
+return output
+
+
+
+}
+ get Done(){
+ 
+
+let done = ProxyState.todo.filter(t => t.completed == true)
+  
+
+
+
+
+
+  return done.length
+ }
+
+
+
 
 
 

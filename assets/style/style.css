@@ -2,6 +2,7 @@
 body {
   background-size: cover;
   color: white;
+  text-shadow: 2px;
 }
 .hide{
   opacity: 0;
@@ -9,4 +10,8 @@ body {
 }
 
 .hide-container:hover .hide{
-  opacity: 1;
+  opacity: 1;}
+
+  .time-window{
+    height: 60vh
+  }

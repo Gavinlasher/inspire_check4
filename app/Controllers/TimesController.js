@@ -1,7 +1,7 @@
 function showTime() {
   const d = new Date();
   let currentTime = d.toLocaleTimeString();
-  document.getElementById("time").innerHTML = `<li>${currentTime}</li>`;
+  document.getElementById("time").innerHTML = `<h1>${currentTime}</h1>`;
 }
 
 export class TimesController {
