@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { todosService } from "../Services/TodosService.js";
+import { Pop } from "../Utils/Pop.js";
 
 function _drawTodo(){
   let temp = ""
@@ -46,6 +47,7 @@ let rawTask = {
 
 async deleteTodo(id){
   try {
+    if(await Pop.confirm())
     await todosService.deleteTodo(id)
     console.log(id,'id form the todo');
   } catch (error) {
