@@ -9,7 +9,7 @@ export class Quote {
     return `
     <h3>Quote of the Day </h3>
     <li>${this.content}</li>
-    <lil>${this.author}</li>
+    <div class="hide-container"><span class="hide">${this.author}</span></div>
     `;
   }
 }
