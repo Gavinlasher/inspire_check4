@@ -25,7 +25,7 @@
     </nav>
   </header> -->
   <main class="img-bg container-fluid">
-    <div class="row justify-content-end">
+    <div class="row justify-content-end vis">
       <div class="col-3 ">
         <div id="weather">
           <img class="img-fluid"
@@ -35,21 +35,21 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row vis">
       <div  class="col-12  time-window d-flex justify-content-center align-items-center ">
-        <span id="time" class="text-light shadow"></span>
+        <span id="time" class="text-light"></span>
       </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-between align-items-flex-end vis">
       <div id="quotes" class="col-6">
         quotes
       </div>
-      <div class="col-4">
+      <div class="col-3">
         <div class=" bg-dark text-light text-center">
-          <h3>Todo List</h3>
+          <h3 class="m-0">Todo List</h3>
         </div>
-        <div id="todo" class="bg-light text-white">
-          task
+        <div id="todo" class="bg-dark text-white">
+          
         </div>
           <form class="" onsubmit="app.todosController.createTask()">
             <div class="input-group">
